@@ -1,0 +1,231 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      * {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.banner {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+	url(static/bg1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar {
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 120px;
+	cursor: pointer;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.navbar ul li::after {
+	content: "";
+	height: 3px;
+	width: 0;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-55%);
+	text-align: center;
+	color: #fff;
+}
+
+.content h1 {
+	font-size: 60px;
+	margin-top: 80px;
+}
+
+.content p {
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 25px;
+}
+
+.button {
+        width: 150px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 10px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #009688;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        border: 2px solid #4caf50;
+      }
+
+
+@media only screen and (max-width: 700px) {}
+
+	content h1 {
+		font-size: 46px;
+		transform: translateY(-10%);
+	}
+
+	.logo {
+		width: 100px;
+	}
+
+	.navbar ul li {
+		margin: 0 5px;
+	}
+
+	.navbar ul li a {
+		font-size: 11px;
+	}
+
+
+
+table {
+  margin: 0 auto;
+}
+
+    </style>
+    
+  </head>
+
+
+  <body>
+    <div class="banner">
+      <div class="navbar">
+        <img src="static/logo2.png" class="logo">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PREDICT</a></li>
+          <li><a href="#">SUPPORT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <h1>HEY! I am Valuer.</h1>
+        <p>Interested to predict the price of the house?<br>want to buy or sell</p>
+        
+
+        <table >
+        <tr>
+          <td>
+          <form action="predict">
+            <input type="submit" class="button button1" value="SELL" />
+          </form>
+          </td>
+          <td>
+          <form action="predict">
+            <input type="submit" class="button button1" value="BUY" />
+          </form>
+          </td>
+        </tr>
+        </table>
+      
+
+      </div>
+    </div>
+  </body>
+  
+  </html>
+
+  <!--<body>
+    <div class="home_bg">
+      <h1>Hey! i am valuer,</h1>
+
+      <h2>Interested to predict the price of your house? hit START.</h2>
+
+      <form action="predict">
+        <input type="submit" class="button button1" value="START" />
+      </form>
+    </div>
+  </body>
+</html>
+
+<style>
+      h2 {
+        margin-top: 150px;
+        font-size: 40px;
+      }
+
+      h1 {
+        font-size: 60px;
+      }
+
+      body {
+        background-image: url("{%static 'bg.png'%}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+      }
+
+      .button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: solid;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        border: 2px solid #4caf50;
+      }
+
+      .button1 {
+        background-color: green;
+        color: white;
+        border: 2px solid #4caf50;
+      }
+
+      .home_bg {
+        background-color: beige;
+      }
+    </style>

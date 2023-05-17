@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="result">
+      <label for="bedrooms">Bedrooms:</label>
+      <input
+        type="text"
+        id="bedrooms"
+        name="bedrooms"
+        placeholder="enter no. of bedrooms"
+        required
+      />
+
+      <label for="bathrooms">Bathrooms:</label>
+      <input
+        type="text"
+        id="bathrooms"
+        name="bathrooms"
+        placeholder="enter no. of bathrooms"
+        required
+      />
+
+      <label for="sqft_living">Sqft Living:</label>
+      <input
+        type="text"
+        id="sqft_living"
+        name="sqft_living"
+        placeholder="enter sqft living"
+        required
+      />
+
+      <label for="sqft_lot">Sqft Lot:</label>
+      <input
+        type="text"
+        id="sqft_lot"
+        name="sqft_lot"
+        placeholder="enter sqft lot"
+        required
+      />
+
+      <label for="floors">Floors:</label>
+      <input
+        type="text"
+        id="floors"
+        name="floors"
+        placeholder="enter no. of floors"
+        required
+      />
+
+      <label for="waterfront">Waterfront:</label>
+      <input
+        type="text"
+        id="sqft_lot"
+        name="waterfront"
+        placeholder="enter waterfront no."
+        required
+      />
+
+      <label for="view">House View:</label>
+      <input
+        type="text"
+        id="view"
+        name="view"
+        placeholder="enter no. of view"
+        required
+      />
+
+      <label for="condition">Condition:</label>
+      <select id="condition" name="condition" required>
+        <option value="">--Select House Condition--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <label for="grade">Grade:</label>
+      <select id="grade" name="grade" required>
+        <option value="">--Select House Grade--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <label for="sqft_above">Sqft Above:</label>
+      <input
+        type="text"
+        id="sqft_above"
+        name="sqft_above"
+        placeholder="enter sqft above"
+        required
+      />
+
+      <label for="sqft_basement">Sqft Basement:</label>
+      <input
+        type="text"
+        id="sqft_basement"
+        name="sqft_basement"
+        placeholder="enter sqft basement"
+        required
+      />
+
+      <label for="yr_built">Year Built:</label>
+      <input
+        type="text"
+        id="yr_built"
+        name="yr_built"
+        placeholder="enter year built"
+        required
+      />
+
+      <label for="yr_renovated">Year Renovated:</label>
+      <input
+        type="text"
+        id="yr_renovated"
+        name="yr_renovated"
+        placeholder="enter year renovated"
+        required
+      />
+
+      <label for="zipcode">Zipcode:</label>
+      <input
+        type="text"
+        id="zipcode"
+        name="zipcode"
+        placeholder="enter zipcode"
+        required
+      />
+
+      <label for="sqft_living15">Sqft living15:</label>
+      <input
+        type="text"
+        id="sqft_living15"
+        name="sqft_living15"
+        placeholder="enter sqft living15"
+        required
+      />
+
+      <label for="sqft_lot15">Sqft Lot15:</label>
+      <input
+        type="text"
+        id="sqft_lot15"
+        name="sqft_lot15"
+        placeholder="enter sqft lot15"
+        required
+      />
+
+      <input type="submit" value="PREDICT" />
+    </form>
+    <div style="background-color: #4caf50; text-align: center; color: white">
+      <h2>{{result2}}</h2>
+    </div>
+  </body>
+</html>
